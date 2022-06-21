@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,700;1,400&display=swap");
 
 * {
   margin: 0;
@@ -8,13 +7,17 @@
 }
 
 :root {
---softRed: hsl(10, 79%, 65%)
---cyan: hsl(186, 34%, 60%)
---softBlue: hsl(204, 34%, 60%)
---darkBrown: hsl(25, 47%, 15%)
---mediumBrown: hsl(28, 10%, 53%)
---cream: hsl(27, 66%, 92%)
---veryPaleOrange: hsl(33, 100%, 98%)
+  --softRed: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+  --softBlue: hsl(204, 34%, 60%);
+  --darkBrown: hsl(25, 47%, 15%);
+  --mediumBrown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --veryPaleOrange: hsl(33, 100%, 98%);
+}
+
+body {
+  background-color: var(--cream);
 }
 
 .App {
