@@ -1,29 +1,36 @@
 [
   {
+    "key": "1",
     "day": "mon",
     "amount": 17.45
   },
   {
+    "key": "2",
     "day": "tue",
     "amount": 34.91
   },
   {
+    "key": "3",
     "day": "wed",
     "amount": 52.36
   },
   {
+    "key": "4",
     "day": "thu",
     "amount": 31.07
   },
   {
+    "key": "5",
     "day": "fri",
     "amount": 23.39
   },
   {
+    "key": "6",
     "day": "sat",
     "amount": 43.28
   },
   {
+    "key": "7",
     "day": "sun",
     "amount": 25.48
   }

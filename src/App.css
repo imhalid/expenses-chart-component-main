@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: dm-sans, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 :root {
@@ -20,9 +23,125 @@ body {
   background-color: var(--cream);
 }
 
+*::selection {
+  color: aliceblue;
+  background: var(--softRed);
+}
+
 .App {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+  gap: 22px;
+}
+
+/* SECTION - 1 */
+
+.section1 {
+  height: 125px;
+  background-color: var(--softRed);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+  border-radius: 20px;
+}
+
+.section1 > article {
+  color: var(--veryPaleOrange);
+}
+
+.section1 > article > h5 {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.section1 > article > h1 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+/* SECTION - 2 */
+
+.section2 {
+  height: 515px;
+  background-color: var(--veryPaleOrange);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section2 > h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--darkBrown);
+}
+
+.total-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.total-container > .total > h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  color: var(--darkBrown);
+}
+
+.total-container > .total > h5 {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: var(--mediumBrown);
+}
+
+.total-container > .percentage {
+  text-align: end;
+  align-self: flex-end;
+}
+
+.total-container > .percentage > h5 {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--darkBrown);
+  margin-bottom: 5px;
+}
+
+.total-container > .percentage > p {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--mediumBrown);
+}
+
+.spacer {
+  height: 1px;
+  background-color: var(--cream);
+}
+
+.charts-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chart {
+  display: flex;
+  flex-direction: row;
+}
+
+.charts {
+  align-items: center;
+  display: flex;
+  flex-direction: column-reverse;
 }
