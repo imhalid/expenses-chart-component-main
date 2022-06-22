@@ -132,6 +132,7 @@ body {
 
 .charts-container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -144,4 +145,8 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column-reverse;
+}
+
+.bar {
+  background-color: var(--softBlue);
 }

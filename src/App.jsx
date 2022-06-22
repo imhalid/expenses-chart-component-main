@@ -20,14 +20,19 @@ function App() {
               <div key={item.key} className="chart">
                 <div className="charts">
                   <h3>{item.day}</h3>
-                  <div data-value={100 - item.amount}></div>
+                  <div
+                    className="bar"
+                    style={{
+                      width: "50px",
+                      height: item.amount + "px",
+                    }}
+                  ></div>
                   <h4>{item.amount}</h4>
                 </div>
               </div>
             ))}
-            <div className="spacer" />
           </div>
-
+          <div className="spacer" />
           <div className="total-container">
             <article className="total">
               <h5>Total this month</h5>
