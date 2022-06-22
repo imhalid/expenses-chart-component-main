@@ -172,10 +172,7 @@ body {
 
 #bar:hover {
   background-color: var(--softSoftRed);
-}
-
-#bar:focus {
-  outline: 1px solid var(--softSoftRed);
+  cursor: pointer;
 }
 
 #bar::before {
