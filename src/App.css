@@ -11,6 +11,7 @@
 
 :root {
   --softRed: hsl(10, 79%, 65%);
+  --softSoftRed: hsl(10, 79%, 75%);
   --cyan: hsl(186, 34%, 60%);
   --softBlue: hsl(204, 34%, 60%);
   --darkBrown: hsl(25, 47%, 15%);
@@ -69,6 +70,8 @@ body {
   font-size: 2rem;
 }
 
+/* SECTION - 1  END */
+
 /* SECTION - 2 */
 
 .section2 {
@@ -80,6 +83,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+
+/* FOOTER */
 
 .section2 > h1 {
   font-weight: 700;
@@ -125,15 +130,24 @@ body {
   color: var(--mediumBrown);
 }
 
+/* FOOTER END */
+
+/* SPACER */
+
 .spacer {
   height: 1px;
   background-color: var(--cream);
 }
 
+/* SPACER END */
+
+/* CHARTS */
+
 .charts-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 210px;
 }
 
 .chart {
@@ -142,11 +156,95 @@ body {
 }
 
 .charts {
+  position: relative;
   align-items: center;
   display: flex;
   flex-direction: column-reverse;
 }
 
-.bar {
-  background-color: var(--softBlue);
+#bar {
+  position: relative;
+  width: 50px;
+  background-color: var(--softRed);
+  border-radius: 7px;
+  transition: all 0.2s ease-in;
 }
+
+#bar:hover {
+  background-color: var(--softSoftRed);
+}
+
+#bar:focus {
+  outline: 1px solid var(--softSoftRed);
+}
+
+#bar::before {
+  content: attr(data-amount);
+  position: absolute;
+  top: -55px;
+  left: -9px;
+  opacity: 0;
+  font-weight: 700;
+  background-color: var(--darkBrown);
+  color: var(--cream);
+  padding: 10px;
+  border-radius: 7px;
+  transition: all 0.2s ease-in;
+}
+
+#bar:hover::before {
+  opacity: 1;
+  top: -45px;
+}
+
+.charts > input {
+  display: none;
+}
+
+.charts > input:nth-child(n):checked + label > #bar {
+  background-color: var(--softBlue);
+  opacity: 1;
+}
+
+.charts > input:nth-child(n):checked + label > #bar::before {
+  opacity: 1;
+  top: -45px;
+}
+
+.charts > h3 {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--mediumBrown);
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 340px;
+    gap: 15px;
+  }
+  #bar {
+    width: 35px;
+  }
+
+  .section2 {
+    padding: 20px;
+    height: 420px;
+  }
+
+  .total-container > .total > h1 {
+    font-size: 2rem;
+  }
+
+  .section2 > h1 {
+    font-size: 1.5rem;
+  }
+
+  #bar::before {
+    left: -14px;
+    font-size: 0.9rem;
+    z-index: 100;
+  }
+}
+
+/* CHARTS END */

@@ -20,14 +20,16 @@ function App() {
               <div key={item.key} className="chart">
                 <div className="charts">
                   <h3>{item.day}</h3>
-                  <div
-                    className="bar"
-                    style={{
-                      width: "50px",
-                      height: item.amount + "px",
-                    }}
-                  ></div>
-                  <h4>{item.amount}</h4>
+                  <input type="radio" name="check" id={item.key} />
+                  <label htmlFor={item.key}>
+                    <div
+                      data-amount={`$${item.amount}`}
+                      id="bar"
+                      style={{
+                        height: item.amount * 2.5 + "px",
+                      }}
+                    ></div>
+                  </label>
                 </div>
               </div>
             ))}
